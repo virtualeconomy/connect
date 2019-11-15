@@ -476,6 +476,24 @@ export default class DeviceCommands {
     }
     // Binance: end
 
+    // Vsys: begin
+    async vsysGetAddress(address_n: Array<number>, showOnTrezor: boolean): Promise<trezor.VsysAddress> {
+        const response: MessageResponse<trezor.VsysAddress> = await this.typedCall('VsysGetAddress', 'VsysAddress', {
+            address_n,
+            show_display: !!showOnTrezor,
+        });
+        return response.message;
+    }
+
+        async vsysGetPublicKey(address_n: Array<number>, showOnTrezor: boolean): Promise<trezor.VsysPublicKey> {
+        const response: MessageResponse<trezor.VsysPublicKey> = await this.typedCall('VsysGetPublicKey', 'VsysPublicKey', {
+            address_n,
+            show_display: !!showOnTrezor,
+        });
+        return response.message;
+    }
+    // Vsys: end
+
     async cipherKeyValue(
         address_n: Array<number>,
         key: string,

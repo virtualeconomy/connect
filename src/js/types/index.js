@@ -183,6 +183,7 @@ import * as LISK from './lisk';
 import * as TEZOS from './tezos';
 import * as EOS from './eos';
 import * as BINANCE from './binance';
+import * as VSYS from './vsys';
 
 // export type UiResponseFn = (settings: UiResponse) => void;
 export type ChangeSettings = (settings: Settings) => void;
@@ -311,6 +312,12 @@ declare function F_BinanceGetPublicKey(params: (P.$Common & BINANCE.$BinanceGetP
 declare function F_BinanceGetPublicKey(params: (P.$Common & { bundle: Array<BINANCE.$BinanceGetPublicKey> })): Promise<BINANCE.BinanceGetPublicKey$$>;
 export type BinanceGetPublicKey = typeof F_BinanceGetPublicKey;
 export type BinanceSignTransaction = (BINANCE.$BinanceSignTransaction) => Promise<BINANCE.BinanceSignTransaction$>;
+
+declare function F_VsysGetAddress(params: (P.$Common & VSYS.$VsysGetAddress)): Promise<VSYS.VsysGetAddress$>;
+export type VsysGetAddress = typeof F_VsysGetAddress;
+
+declare function F_VsysGetPublicKey(params: (P.$Common & VSYS.$VsysGetPublicKey)): Promise<VSYS.VsysGetPublicKey$>;
+export type VsysGetPublicKey = typeof F_VsysGetPublicKey;
 
 /* eslint-enable no-redeclare */
 

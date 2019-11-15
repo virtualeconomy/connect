@@ -924,6 +924,22 @@ export type BinanceSignedTx = {
     public_key: string,
 }
 
+// VSYS types
+export type VsysPublicKey = {
+    protocol: string,
+    api: number,
+    opc: string,
+    public_key: string,
+    address: string,
+}
+
+export type VsysAddress = {
+    protocol: string,
+    api: number,
+    opc: string,
+    address: string,
+}
+
 // GetAddress response
 export type Address = {
     address: string,
