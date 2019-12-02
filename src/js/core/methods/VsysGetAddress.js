@@ -29,7 +29,7 @@ export default class VsysGetAddress extends AbstractMethod {
         super(message);
 
         this.requiredPermissions = ['read'];
-        this.firmwareRange = getFirmwareRange(this.name, getMiscNetwork('VSYS'), this.firmwareRange);
+        this.firmwareRange = getFirmwareRange(this.name, getMiscNetwork('Vsys'), this.firmwareRange);
 
         // create a bundle with only one batch if bundle doesn't exists
         this.hasBundle = Object.prototype.hasOwnProperty.call(message.payload, 'bundle');
@@ -138,6 +138,7 @@ export default class VsysGetAddress extends AbstractMethod {
                 path: batch.path,
                 serializedPath: getSerializedPath(batch.path),
                 address: response.address,
+                api: response.api,
             });
 
             if (this.hasBundle) {

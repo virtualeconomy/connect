@@ -318,6 +318,7 @@ export type VsysGetAddress = typeof F_VsysGetAddress;
 
 declare function F_VsysGetPublicKey(params: (P.$Common & VSYS.$VsysGetPublicKey)): Promise<VSYS.VsysGetPublicKey$>;
 export type VsysGetPublicKey = typeof F_VsysGetPublicKey;
+export type VsysSignTx = (VSYS.$VsysSignTx) => Promise<VSYS.VsysSignTx$>;
 
 /* eslint-enable no-redeclare */
 

@@ -28,7 +28,7 @@ export default class VsysGetPublicKey extends AbstractMethod {
         super(message);
 
         this.requiredPermissions = ['read'];
-        this.firmwareRange = getFirmwareRange(this.name, getMiscNetwork('VSYS'), this.firmwareRange);
+        this.firmwareRange = getFirmwareRange(this.name, getMiscNetwork('Vsys'), this.firmwareRange);
         this.info = 'Export VSYS public key';
 
         // create a bundle with only one batch if bundle doesn't exists
@@ -102,6 +102,8 @@ export default class VsysGetPublicKey extends AbstractMethod {
                 path: batch.path,
                 serializedPath: getSerializedPath(batch.path),
                 publicKey: response.public_key,
+                address: response.address,
+                api: response.api,
             });
 
             if (this.hasBundle) {

@@ -940,6 +940,28 @@ export type VsysAddress = {
     address: string,
 }
 
+export type VsysTransaction = {
+    protocol: string,
+    api: number,
+    opc: string,
+    transactionType: number,
+    senderPublicKey: string,
+    amount?: number,
+    fee: number,
+    feeScale: number,
+    recipient?: string,
+    timestamp: number,
+    attachment?: string,
+    txId?: string,
+}
+
+export type VsysSignedTx = {
+    protocol: string,
+    api: number,
+    opc: string,
+    signature: string,
+}
+
 // GetAddress response
 export type Address = {
     address: string,

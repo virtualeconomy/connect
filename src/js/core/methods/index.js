@@ -55,6 +55,7 @@ import BinanceGetAddress from './BinanceGetAddress';
 import BinanceSignTransaction from './BinanceSignTransaction';
 import VsysGetPublicKey from './VsysGetPublicKey';
 import VsysGetAddress from './VsysGetAddress';
+import VsysSignTx from './VsysSignTx';
 import VerifyMessage from './VerifyMessage';
 import WipeDevice from './WipeDevice';
 import ApplyFlags from './ApplyFlags';
@@ -116,6 +117,7 @@ const classes: {[k: string]: any} = {
     'binanceSignTransaction': BinanceSignTransaction,
     'vsysGetPublicKey': VsysGetPublicKey,
     'vsysGetAddress': VsysGetAddress,
+    'vsysSignTx': VsysSignTx,
     'verifyMessage': VerifyMessage,
     'wipeDevice': WipeDevice,
     'applyFlags': ApplyFlags,
