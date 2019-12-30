@@ -52,9 +52,7 @@ export type VsysSignedTx = {
     protocol: 'v.systems',
     api: number,
     opc: 'signature',
-    signature: string,
-    path: Array<number>,
-    serializedPath: string,
+    signature: string
 }
 
 export type VsysTransaction = {
