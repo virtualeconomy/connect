@@ -59,6 +59,7 @@ const parseFeatures = (features: Features): Features => {
             'Feature_Ripple',
             'Feature_Stellar',
             'Feature_Tezos',
+            'Feature_Vsys',
             'Feature_U2F',
         ];
     }

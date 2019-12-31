@@ -247,6 +247,19 @@ class TrezorConnect {
         return await call({ method: 'binanceSignTransaction', ...params });
     }
 
+    static vsysGetAddress: $T.VsysGetAddress = async (params) => {
+        const useEventListener = eventEmitter.listenerCount(UI.ADDRESS_VALIDATION) > 0;
+        return await call({ method: 'vsysGetAddress', ...params, useEventListener });
+    }
+
+    static vsysGetPublicKey: $T.VsysGetPublicKey = async (params) => {
+        return await call({ method: 'vsysGetPublicKey', ...params });
+    }
+
+    static vsysSignTx: $T.VsysSignTx = async (params) => {
+        return await call({ method: 'vsysSignTx', ...params });
+    }
+
     static verifyMessage: $T.VerifyMessage = async (params) => {
         return await call({ method: 'verifyMessage', ...params });
     }
